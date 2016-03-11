@@ -46,11 +46,7 @@ Here are instructions how to compile the source code
 Go to OpenRex board, interrupt uBoot booting process (press any key). Then write following commands:
 
 
-    run update_kernel
-    run update_fdt
-
-
-Then press "RESET" button and wait until it boots up.
+    run update_kernel;run update_fdt;reset
 
 
 Note: if you would like to test the kernel without saving it to SD card, go to uBoot and use following commands:

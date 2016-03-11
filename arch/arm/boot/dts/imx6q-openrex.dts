@@ -18,6 +18,10 @@
 / {
 	model = "FEDEVEL i.MX6 Quad OpenRex Board";
 	compatible = "fsl,imx6q-openrex", "fsl,imx6q";
+
+	memory {
+		reg = <0x10000000 0x80000000>; /* reg = 0x10000000 (base address) 0x80000000 (size = 2147483648 bits => 2GB) */
+	};
 };
 
 &mxcfb1 {
@@ -25,17 +29,21 @@
 };
 
 &mxcfb2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &mxcfb3 {
-	status = "okay";
+	status = "disabled";
 };
 
 &mxcfb4 {
-	status = "okay";
+	status = "disabled";
 };
 
 &sata {
+	status = "okay";
+};
+
+&pcie {
 	status = "okay";
 };
