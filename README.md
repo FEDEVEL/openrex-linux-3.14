@@ -40,7 +40,11 @@ Here are instructions how to compile the source code
     cp arch/arm/boot/dts/imx6q-openrex.dtb /tftp/imx6/imx6q-openrex.dtb
 
 ### SOLO
-    TODO
+    make clean
+    make imx_v7_defconfig
+    make -j4 zImage imx6s-openrex.dtb
+    cp arch/arm/boot/zImage /tftp/imx6/zImage-imx6s-openrex
+    cp arch/arm/boot/dts/imx6s-openrex.dtb /tftp/imx6/imx6s-openrex.dtb
 
 # Update OpenRex SD card with Linux
 Go to OpenRex board, interrupt uBoot booting process (press any key). Then write following commands:
@@ -59,6 +63,7 @@ Here is a list of files, where we usually do changes:
 
 
     arch/arm/boot/dts/imx6q-openrex.dts
+    arch/arm/boot/dts/imx6s-openrex.dts
     arch/arm/boot/dts/imx6qdl-openrex.dtsi
     
 
