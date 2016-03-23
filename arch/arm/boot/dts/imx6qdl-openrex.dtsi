@@ -28,6 +28,12 @@
 			linux,default-trigger = "max8903-charger-charging";
 			retain-state-suspended;
 		};
+
+		cpu-user-led {
+			gpios = <&gpio1 19 0>;
+			linux,default-trigger = "heartbeat";
+			retain-state-suspended;
+		};
 	};
 
 	regulators {
