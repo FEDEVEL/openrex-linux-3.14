@@ -515,12 +515,12 @@
 				#set MCU_RSTINn
 				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'echo 16 > /sys/class/gpio/export'"
 				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio/gpio16/'"
-				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'chmod -R 664 /sys/class/gpio/gpio16/'"
+				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'chmod -R 774 /sys/class/gpio/gpio16/'"
 
 				#set MCU_ISPn
 				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'echo 18 > /sys/class/gpio/export'"
 				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/gpio/gpio18/'"
-				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'chmod -R 664 /sys/class/gpio/gpio18/'"
+				ACTION=="add", SUBSYSTEM=="gpio", PROGRAM="/bin/sh -c 'chmod -R 774 /sys/class/gpio/gpio18/'"
 
 				*/
 				MX6QDL_PAD_SD1_DAT0__GPIO1_IO16		0x00000831 /* MCU_RSTINn Open Drain Output */
