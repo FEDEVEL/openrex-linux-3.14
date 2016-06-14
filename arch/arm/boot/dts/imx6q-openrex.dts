@@ -47,3 +47,12 @@
 &pcie {
 	status = "okay";
 };
+
+
+&ecspi3 {
+	spidev30: spi@3 {
+		compatible = "spidev";
+		reg = <0>;
+		spi-max-frequency = <57600000>;
+	};
+};
