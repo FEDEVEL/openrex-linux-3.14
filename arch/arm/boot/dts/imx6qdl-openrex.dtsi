@@ -487,11 +487,28 @@
 	status = "disabled";
 };
 
+&flexcan1 {
+        pinctrl-names = "default";
+        pinctrl-0 = <&pinctrl_openrex_flexcan1>;
+        status = "okay";
+};
+
+
 &iomuxc {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_hog>;
 
+	imx6q-openrex {
+                pinctrl_openrex_flexcan1: openrex-flexcan1 {
+                        fsl,pins = <
+                                MX6QDL_PAD_SD3_CLK__FLEXCAN1_RX 0x80000000
+                                MX6QDL_PAD_SD3_CMD__FLEXCAN1_TX 0x80000000
+                        >;
+                };
+	};
+
 	imx6qdl-sabresd {
+
 		pinctrl_hog: hoggrp {
 			fsl,pins = <
 				MX6QDL_PAD_DI0_PIN4__GPIO4_IO20 	0x80000000 /* Board variant 0 */
